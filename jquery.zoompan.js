@@ -52,7 +52,9 @@
             $(this).mouseup(onUp);
             $(this).mouseleave(onUp);
             $(this).mousemove(onMove);
-            $(this).mousewheel(onZoom);
+			
+			if($.fn.mousewheel)
+				$(this).mousewheel(onZoom);
 
             return this;
         },

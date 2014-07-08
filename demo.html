@@ -1,0 +1,35 @@
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="jquery.mousewheel.js"></script>
+	<script src="jquery.zoompan.js"></script>
+	<script>
+		$(function(){
+			$("#content").panzoom({width:1000, height:1000});
+			$("#content").panzoom("scale", 1);
+		});
+	</script>
+	<style>
+		#container
+		{
+			border:solid 1px black;
+			width:400px;
+			height:400px;
+			position: relative;
+			overflow:auto;
+		}
+		
+		#content
+		{
+			cursor: move;
+			margin:auto;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="content">content</div>
+	</div>
+</body>
+</html>
